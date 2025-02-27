@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'screens/ride_pref/ride_pref_screen.dart';
+// import 'screens/ride_pref/ride_pref_screen.dart';
 import 'theme/theme.dart';
-
+import 'package:BLABLACAR/screens/exercise/bla_but.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -15,7 +15,8 @@ const MyApp({super.key});
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: appTheme,
-      home: Scaffold(body: RidePrefScreen()),
+      // home: Scaffold(body: RidePrefScreen()),
+      home: const BlaButtonTestScreen(), // Set the home to BlaButtonTestScreen
     );
   }
 }
