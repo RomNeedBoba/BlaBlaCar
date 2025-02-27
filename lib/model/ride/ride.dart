@@ -52,3 +52,4 @@ class Ride {
         'Driver: $driver, Seats: $availableSeats, Price: \$${pricePerSeat.toStringAsFixed(2)}';
   }
 }
+
