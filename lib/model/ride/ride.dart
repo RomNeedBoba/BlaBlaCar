@@ -44,6 +44,11 @@ class Ride {
   }
 
   int get remainingSeats => availableSeats - passengers.length;
+//ex7
+
+  bool isSameDay(DateTime other) {
+    return DateTimeUtils.isSameDay(departureDate, other);
+  }
 
   @override
   String toString() {
@@ -52,4 +57,3 @@ class Ride {
         'Driver: $driver, Seats: $availableSeats, Price: \$${pricePerSeat.toStringAsFixed(2)}';
   }
 }
-
