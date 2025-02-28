@@ -7,6 +7,8 @@ import '../../theme/theme.dart';
 import 'widgets/ride_pref_form.dart';
 import 'widgets/ride_pref_history_tile.dart';
 
+import '../../utils/animations_util.dart'; // ex6
+
 const String blablaHomeImagePath = 'assets/images/blabla_home.png';
 
 ///
@@ -22,8 +24,22 @@ class RidePrefScreen extends StatefulWidget {
 }
 
 class _RidePrefScreenState extends State<RidePrefScreen> {
+  // add co
+  final _formKey = GlobalKey<FormState>();
+  final _departureController = TextEditingController();
+  final _destinationController = TextEditingController();
+  final _dateController = TextEditingController();
+
   onRidePrefSelected(RidePref ridePref) {
     // 1 - Navigate to the rides screen (with a buttom to top animation)
+  }
+
+  @override
+  void dispose() {
+    _departureController.dispose();
+    _destinationController.dispose();
+    _dateController.dispose();
+    super.dispose();
   }
 
   @override
@@ -53,10 +69,13 @@ class _RidePrefScreenState extends State<RidePrefScreen> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   // 2.1 Display the Form to input the ride preferences
-                  RidePrefForm(
-                    initRidePref: RidePrefService.currentRidePref,
+                  // RidePrefForm(
+                  //   initRidePref: RidePrefService.currentRidePref,
+                  Padding(                         
+                    padding: const EdgeInsets.all(16.0), //ex6
+                    child: RidePrefForm(),
                   ),
-                  SizedBox(height: BlaSpacings.m),
+                  // SizedBox(height: BlaSpacings.m),
 
                   // 2.2 Optionally display a list of past preferences
                   SizedBox(
