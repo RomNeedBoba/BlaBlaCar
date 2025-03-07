@@ -23,7 +23,8 @@ class RidesScreen extends StatefulWidget {
 class _RidesScreenState extends State<RidesScreen> {
  
   RidePreference currentPreference  = fakeRidePrefs[0];   // TODO 1 :  We should get it from the service
-
+  
+  final RidesService ridesService = RidesService();
   List<Ride> get matchingRides => RidesService.getRidesFor(currentPreference);
 
   void onBackPressed() {
