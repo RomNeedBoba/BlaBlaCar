@@ -102,6 +102,36 @@ List<RidePreference> fakeRidePrefs = [
     arrival: fakeLocations[1], // Marseille
     requestedSeats: 1,
   ),
+   RidePreference(
+    departure: fakeLocations[40], // Battambang
+    arrival: fakeLocations[39], // Siem Reap
+    departureDate: DateTime.now().add(Duration(hours: 5, minutes: 30)),
+    requestedSeats: 2,
+  ),
+  RidePreference(
+    departure: fakeLocations[40], // Battambang
+    arrival: fakeLocations[39], // Siem Reap
+    departureDate: DateTime.now().add(Duration(hours: 8)),
+    requestedSeats: 0,
+  ),
+  RidePreference(
+    departure: fakeLocations[40], // Battambang
+    arrival: fakeLocations[39], // Siem Reap
+    departureDate: DateTime.now().add(Duration(hours: 5)),
+    requestedSeats: 1,
+  ),
+  RidePreference(
+    departure: fakeLocations[40], // Battambang
+    arrival: fakeLocations[39], // Siem Reap
+    departureDate: DateTime.now().add(Duration(hours: 8)),
+    requestedSeats: 2,
+  ),
+  RidePreference(
+    departure: fakeLocations[40], // Battambang
+    arrival: fakeLocations[39], // Siem Reap
+    departureDate: DateTime.now().add(Duration(hours: 5)),
+    requestedSeats: 1,
+  ),
 ];
 
 // Fake  Users
